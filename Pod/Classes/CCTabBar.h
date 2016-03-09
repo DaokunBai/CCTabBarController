@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCTabBar : UIView
 
+
+/**
+ *  Tab bar height, default is 49.0.
+ */
+@property (nonatomic, assign) CGFloat height;
+
 /**
  *  Current selected item which is highlighted on tab bar.
  */

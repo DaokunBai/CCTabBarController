@@ -16,4 +16,11 @@
 
 @implementation CCTabBar
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _height = 49.0;
+    }
+    return self;
+}
+
 @end

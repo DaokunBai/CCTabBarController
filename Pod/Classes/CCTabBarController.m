@@ -8,6 +8,7 @@
 
 #import "CCTabBarController.h"
 #import <objc/runtime.h>
+#import <Masonry/Masonry.h>
 
 @interface UIViewController ()
 
@@ -38,6 +39,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
+    self.tabBar = [[CCTabBar alloc] init];
+    [self.view addSubview:self.tabBar];
+    [self.tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(0);
+        make.height.mas_equalTo(self.tabBar.height);
+    }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
