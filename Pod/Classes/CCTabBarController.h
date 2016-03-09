@@ -74,4 +74,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface UIViewController (CCTabBarItem)
+
+/**
+ *  Corresponding tab bar item.
+ */
+@property (nonatomic, strong, readonly, nullable) CCTabBarItem *cc_tabBarItem;
+
+/**
+ *  Corresponding tab bar controller, read-only.
+ */
+@property (nonatomic, weak, readonly, nullable) CCTabBarController *cc_tabBarController;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

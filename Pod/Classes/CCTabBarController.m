@@ -9,9 +9,16 @@
 #import "CCTabBarController.h"
 #import <objc/runtime.h>
 
-@interface UIViewController (CCTabBarItem)
+@interface UIViewController ()
 
-@property (nonatomic, strong, setter=cc_setTabBarItem:) CCTabBarItem *cc_tabBarItem;
+@property (nonatomic, strong, readwrite, nullable) CCTabBarItem *cc_tabBarItem;
+@property (nonatomic, weak, readwrite, nullable) CCTabBarController *cc_tabBarController;
+
+@end
+
+@interface CCTabBar ()
+
+@property (nonatomic, copy, readwrite) NSArray<CCTabBarItem *> *items;
 
 @end
 
@@ -101,15 +108,13 @@
         _viewControllers = [viewControllers copy];
 
         NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
-//
+
         for (UIViewController *viewController in viewControllers) {
-//            RDVTabBarItem *tabBarItem = [[RDVTabBarItem alloc] init];
-//            [tabBarItem setTitle:viewController.title];
-//            [tabBarItems addObject:tabBarItem];
-//            [viewController rdv_setTabBarController:self];
+            [tabBarItems addObject:viewController.cc_tabBarItem];
+            viewController.cc_tabBarController = self;
         }
-//
-//        [[self tabBar] setItems:tabBarItems];
+
+        self.tabBar.items = [tabBarItems copy];
     } else {
 
         _viewControllers = nil;
@@ -130,6 +135,15 @@
 
 - (void)cc_setTabBarItem:(CCTabBarItem *)cc_tabBarItem {
     objc_setAssociatedObject(self, @selector(cc_tabBarItem), cc_tabBarItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CCTabBarController *)cc_tabBarController {
+    return objc_getAssociatedObject(self, @selector(cc_tabBarController));
+}
+
+
+- (void)cc_setTabBarController:(CCTabBarController *)cc_tabBarController {
+    objc_setAssociatedObject(self, @selector(cc_tabBarController), cc_tabBarController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

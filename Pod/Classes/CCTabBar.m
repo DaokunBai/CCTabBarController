@@ -8,6 +8,12 @@
 
 #import "CCTabBar.h"
 
+@interface CCTabBar ()
+
+@property (nonatomic, copy, readwrite) NSArray<CCTabBarItem *> *items;
+
+@end
+
 @implementation CCTabBar
 
 @end

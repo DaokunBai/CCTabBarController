@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) NSUInteger selectedIndex;
 
+/**
+ *  All the items on tab bar, read-only.
+ */
 @property (nonatomic, copy, readonly) NSArray<CCTabBarItem *> *items;
 
 @end
