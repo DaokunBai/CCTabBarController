@@ -10,6 +10,6 @@
 
 @interface CCTabBarItem : UIControl
 
-- (instancetype)initWithMaker:(void(^)(CCTabBarItem *))maker;
+- (instancetype)initWithMaker:(void(^)(CCTabBarItem *maker))maker;
 
 @end

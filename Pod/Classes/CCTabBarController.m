@@ -12,8 +12,8 @@
 
 @interface UIViewController ()
 
-@property (nonatomic, strong, readwrite, nullable) CCTabBarItem *cc_tabBarItem;
-@property (nonatomic, weak, readwrite, nullable) CCTabBarController *cc_tabBarController;
+@property (nonatomic, strong, readwrite, nullable, setter=cc_setTabBarItem:) CCTabBarItem *cc_tabBarItem;
+@property (nonatomic, weak, readwrite, nullable, setter=cc_setTabBarController:) CCTabBarController *cc_tabBarController;
 
 @end
 
@@ -148,7 +148,6 @@
 - (CCTabBarController *)cc_tabBarController {
     return objc_getAssociatedObject(self, @selector(cc_tabBarController));
 }
-
 
 - (void)cc_setTabBarController:(CCTabBarController *)cc_tabBarController {
     objc_setAssociatedObject(self, @selector(cc_tabBarController), cc_tabBarController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

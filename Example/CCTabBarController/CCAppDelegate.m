@@ -7,12 +7,25 @@
 //
 
 #import "CCAppDelegate.h"
+#import <CCTabBarController/CCTabBarController.h>
 
 @implementation CCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    CCTabBarController *tabBarController = [[CCTabBarController alloc] init];
+    [tabBarController addViewController:[[UIViewController alloc] init] maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.backgroundColor = [UIColor redColor];
+    }];
+    
+    [tabBarController addViewController:[[UIViewController alloc] init] maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.backgroundColor = [UIColor yellowColor];
+    }];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

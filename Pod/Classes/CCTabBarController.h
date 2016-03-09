@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param maker          A maker used to customize CCTabBarItem
  */
 - (void)addViewController:(UIViewController *)viewController
-                    maker:(void(^)(CCTabBarItem *))maker;
+                    maker:(void(^)(CCTabBarItem *maker))maker;
 
 /**
  *  After adding multiple view controllers, call this method to make changes
