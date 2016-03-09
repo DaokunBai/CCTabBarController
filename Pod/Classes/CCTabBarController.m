@@ -23,7 +23,7 @@
 
 @end
 
-@interface CCTabBarController ()
+@interface CCTabBarController () <CCTabBarDelegate>
 
 @property (nonatomic, strong, readwrite) CCTabBar *tabBar;
 @property (nonatomic, copy, readwrite) NSArray<UIViewController *> *viewControllers;
@@ -38,6 +38,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
+    [self.view addSubview:_tabBar];
+    [_tabBar updateTabBarLayout];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.selectedIndex = self.selectedIndex;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -92,6 +100,8 @@
     [self.view addSubview:self.selectedViewController.view];
     [self.selectedViewController didMoveToParentViewController:nil];
 
+    [self.view bringSubviewToFront:self.tabBar];
+
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
@@ -124,9 +134,8 @@
 - (CCTabBar *)tabBar {
     if (!_tabBar) {
         _tabBar = [[CCTabBar alloc] init];
-        _tabBar.layer.zPosition = INT_MAX;
-        [self.view addSubview:_tabBar];
-        [_tabBar updateTabBarLayout];
+        _tabBar.layer.zPosition = 999;
+        _tabBar.delegate = self;
     }
     return _tabBar;
 }
@@ -135,6 +144,41 @@
     return self.selectedIndex;
 }
 
+#pragma mark - CCTabBarDelegate
+
+- (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index {
+//    if ([[self delegate] respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
+//        if (![[self delegate] tabBarController:self shouldSelectViewController:[self viewControllers][index]]) {
+//            return NO;
+//        }
+//    }
+
+    if (self.selectedViewController == self.viewControllers[self.actualIndex]) {
+        if ([self.selectedViewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *selectedController = (UINavigationController *)self.selectedViewController;
+
+            if ([selectedController topViewController] != [selectedController viewControllers][0]) {
+                [selectedController popToRootViewControllerAnimated:YES];
+            }
+        }
+
+        return NO;
+    }
+
+    return YES;
+}
+
+- (void)tabBar:(CCTabBar *)tabBar didSelectItemAtIndex:(NSUInteger)index {
+    if (index >= self.tabBar.items.count) {
+        return;
+    }
+
+    [self setSelectedIndex:index];
+
+//    if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)]) {
+//        [self.delegate tabBarController:self didSelectViewController:[self viewControllers][index]];
+//    }
+}
 @end
 
 @implementation UIViewController (CCTabBarItem)

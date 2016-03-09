@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithMaker:(void(^)(CCTabBarItem *maker))maker;
 
+@property (nonatomic, assign, getter=isCurrent) BOOL current;
+
 @property (nonatomic, strong, nullable) UIColor *normalBackgroundColor;
 @property (nonatomic, strong, nullable) UIColor *highlightedBackgroundColor;
 @property (nonatomic, strong, nullable) UIColor *selectedBackgroundColor;
@@ -31,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) UIImage *highlightedBackgroundImage;
 @property (nonatomic, strong, nullable) UIImage *selectedBackgroundImage;
 
-@property (nonatomic, strong, nullable) UIImage *normalImage;
+@property (nonatomic, strong) UIImage *normalImage;
 @property (nonatomic, strong, nullable) UIImage *highlightedImage;
 @property (nonatomic, strong, nullable) UIImage *selectedImage;
 

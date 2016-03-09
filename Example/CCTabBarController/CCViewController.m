@@ -17,7 +17,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    UIButton *btn = [[UIButton alloc] init];
+    btn.frame = self.view.frame;
+    [btn setTitle:@"Push" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+
+    [btn addTarget:self
+            action:@selector(push)
+  forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)push {
+    [self.navigationController pushViewController:[[CCViewController alloc] init]
+                                         animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

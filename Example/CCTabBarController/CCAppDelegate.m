@@ -7,6 +7,7 @@
 //
 
 #import "CCAppDelegate.h"
+#import "CCViewController.h"
 #import <CCTabBarController/CCTabBarController.h>
 
 @implementation CCAppDelegate
@@ -14,13 +15,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+
+    CCViewController *firstVC = [[CCViewController alloc] init];
+    CCViewController *secondVC = [[CCViewController alloc] init];
+    CCViewController *thirdVC = [[CCViewController alloc] init];
+    CCViewController *forthVC = [[CCViewController alloc] init];
+
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:firstVC];
+
     CCTabBarController *tabBarController = [[CCTabBarController alloc] init];
-    [tabBarController addViewController:[[UIViewController alloc] init] maker:^(CCTabBarItem * _Nonnull maker) {
-        maker.backgroundColor = [UIColor redColor];
+    [tabBarController addViewController:nav maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"Feed_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"Feed_Highlight"];
     }];
     
-    [tabBarController addViewController:[[UIViewController alloc] init] maker:^(CCTabBarItem * _Nonnull maker) {
-        maker.backgroundColor = [UIColor yellowColor];
+    [tabBarController addViewController:secondVC maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"Find_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"Find_Highlight"];
+    }];
+
+    [tabBarController addViewController:thirdVC maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"Notice_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"Notice_Highlight"];
+    }];
+
+    [tabBarController addViewController:forthVC maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"People_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"People_Highlight"];
     }];
 
     [tabBarController commitInitialization];

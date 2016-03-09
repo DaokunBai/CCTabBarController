@@ -12,8 +12,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CCTabBarDelegate;
+
 @interface CCTabBar : UIView
 
+@property (nonatomic, weak, nullable) id<CCTabBarDelegate> delegate;
 
 /**
  *  Tab bar height, default is 49.0.
@@ -39,6 +42,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  Update constraints for tab bar.
  */
 - (void)updateTabBarLayout;
+
+@end
+
+@protocol CCTabBarDelegate <NSObject>
+
+@optional
+
+- (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index;
+- (void)tabBar:(CCTabBar *)tabBar willSelectItemAtIndex:(NSUInteger)index;
+- (void)tabBar:(CCTabBar *)tabBar didSelectItemAtIndex:(NSUInteger)index;
 
 @end
 

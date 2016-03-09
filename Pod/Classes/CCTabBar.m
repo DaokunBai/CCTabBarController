@@ -21,24 +21,52 @@
 - (instancetype)init {
     if (self = [super init]) {
         _itemHeight = 49.0;
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
 
 - (void)setItems:(NSArray<CCTabBarItem *> *)items {
     _items = [items copy];
+    _items.firstObject.current = YES;
 
     for (CCTabBarItem *item in _items) {
         [self addSubview:item];
         [item mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.mas_equalTo(0);
         }];
+        [item addTarget:self
+                 action:@selector(tabBarItemClicked:)
+       forControlEvents:UIControlEventTouchUpInside];
     }
 
     [_items mas_distributeViewsAlongAxis:MASAxisTypeHorizontal
                         withFixedSpacing:0
                              leadSpacing:0
                              tailSpacing:0];
+}
+
+- (void)tabBarItemClicked:(CCTabBarItem *)item {
+    NSUInteger index = [self.items indexOfObject:item];
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(tabBar:shouldSelectItemAtIndex:)]) {
+            if (![self.delegate tabBar:self shouldSelectItemAtIndex:index]) {
+                return;
+            }
+        }
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBar:willSelectItemAtIndex:)]) {
+        [self.delegate tabBar:self willSelectItemAtIndex:index];
+    }
+
+    for (CCTabBarItem *item in self.items) {
+        item.current = NO;
+    }
+    self.items[index].current = YES;
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBar:didSelectItemAtIndex:)]) {
+        [self.delegate tabBar:self didSelectItemAtIndex:index];
+    }
 }
 
 - (void)setItemHeight:(CGFloat)itemHeight {
