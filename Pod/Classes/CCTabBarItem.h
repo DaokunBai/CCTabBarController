@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCTabBarItem : UIView
+@interface CCTabBarItem : UIControl
+
+- (instancetype)initWithMaker:(void(^)(CCTabBarItem *))maker;
 
 @end
