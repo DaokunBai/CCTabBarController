@@ -1,6 +1,0 @@
-framework module CCTabBarController {
-  umbrella header "CCTabBarController-umbrella.h"
-
-  export *
-  module * { export * }
-}
