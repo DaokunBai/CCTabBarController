@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CCTabBarController_Example', :exclusive => true do
+  pod 'CCTabBarController', :path => '../'
+end
+
+target 'CCTabBarController_Tests', :exclusive => true do
+  pod 'CCTabBarController', :path => '../'
+
+  pod 'Specta'
+  pod 'Expecta'
+end
