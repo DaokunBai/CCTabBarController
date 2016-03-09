@@ -39,6 +39,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
+
+    self.selectedIndex = 0;
     [self.view addSubview:_tabBar];
     [_tabBar updateTabBarLayout];
 }
@@ -153,7 +155,7 @@
 //        }
 //    }
 
-    if (self.selectedViewController == self.viewControllers[self.actualIndex]) {
+    if (self.selectedViewController == self.viewControllers[index]) {
         if ([self.selectedViewController isKindOfClass:[UINavigationController class]]) {
             UINavigationController *selectedController = (UINavigationController *)self.selectedViewController;
 
