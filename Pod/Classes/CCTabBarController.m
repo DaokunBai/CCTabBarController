@@ -124,6 +124,7 @@
 - (CCTabBar *)tabBar {
     if (!_tabBar) {
         _tabBar = [[CCTabBar alloc] init];
+        _tabBar.layer.zPosition = INT_MAX;
         [self.view addSubview:_tabBar];
         [_tabBar updateTabBarLayout];
     }
