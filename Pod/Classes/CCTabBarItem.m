@@ -7,6 +7,7 @@
 //
 
 #import "CCTabBarItem.h"
+#import "UIImage+Color.h"
 #import <Masonry/Masonry.h>
 
 @interface CCTabBarItem ()
@@ -41,8 +42,26 @@
         }];
 
         maker(self);
+
+        [self addTarget:self action:@selector(ha)
+       forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    if (highlighted) {
+        self.backgroundImageView.image = self.highlightedBackgroundImage;
+        self.iconImageView.image = self.highlightedImage;
+    } else {
+        self.backgroundImageView.image = self.normalBackgroundImage;
+        self.iconImageView.image = self.normalImage;
+    }
+}
+
+- (void)ha {
+
 }
 
 @end

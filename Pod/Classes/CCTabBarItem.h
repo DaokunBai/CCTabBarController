@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CCTabBarItem : UIControl
 
 /**
@@ -21,4 +23,19 @@
  */
 - (instancetype)initWithMaker:(void(^)(CCTabBarItem *maker))maker;
 
+@property (nonatomic, strong, nullable) UIColor *normalBackgroundColor;
+@property (nonatomic, strong, nullable) UIColor *highlightedBackgroundColor;
+@property (nonatomic, strong, nullable) UIColor *selectedBackgroundColor;
+
+@property (nonatomic, strong, nullable) UIImage *normalBackgroundImage;
+@property (nonatomic, strong, nullable) UIImage *highlightedBackgroundImage;
+@property (nonatomic, strong, nullable) UIImage *selectedBackgroundImage;
+
+@property (nonatomic, strong, nullable) UIImage *normalImage;
+@property (nonatomic, strong, nullable) UIImage *highlightedImage;
+@property (nonatomic, strong, nullable) UIImage *selectedImage;
+
 @end
+
+
+NS_ASSUME_NONNULL_END
