@@ -22,6 +22,8 @@
     [tabBarController addViewController:[[UIViewController alloc] init] maker:^(CCTabBarItem * _Nonnull maker) {
         maker.backgroundColor = [UIColor yellowColor];
     }];
+
+    [tabBarController commitInitialization];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = tabBarController;

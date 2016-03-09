@@ -8,6 +8,10 @@
 
 #import "CCTabBarItem.h"
 
+@interface CCTabBarItem ()
+
+@end
+
 @implementation CCTabBarItem
 
 - (instancetype)initWithMaker:(void (^)(CCTabBarItem *))maker {

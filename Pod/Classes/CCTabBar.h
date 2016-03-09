@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Tab bar height, default is 49.0.
  */
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat itemHeight;
 
 /**
  *  Current selected item which is highlighted on tab bar.
@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  All the items on tab bar, read-only.
  */
 @property (nonatomic, copy, readonly) NSArray<CCTabBarItem *> *items;
+
+/**
+ *  Update constraints for tab bar.
+ */
+- (void)updateTabBarLayout;
 
 @end
 

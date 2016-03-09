@@ -27,7 +27,6 @@
 
 @property (nonatomic, strong, readwrite) CCTabBar *tabBar;
 @property (nonatomic, copy, readwrite) NSArray<UIViewController *> *viewControllers;
-
 @property (nonatomic, assign, readonly) NSUInteger actualIndex;
 
 @end
@@ -39,13 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
-    self.tabBar = [[CCTabBar alloc] init];
-    [self.view addSubview:self.tabBar];
-    [self.tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.mas_equalTo(0);
-        make.height.mas_equalTo(self.tabBar.height);
-    }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -127,6 +119,15 @@
 
         _viewControllers = nil;
     }
+}
+
+- (CCTabBar *)tabBar {
+    if (!_tabBar) {
+        _tabBar = [[CCTabBar alloc] init];
+        [self.view addSubview:_tabBar];
+        [_tabBar updateTabBarLayout];
+    }
+    return _tabBar;
 }
 
 - (NSUInteger)actualIndex {
