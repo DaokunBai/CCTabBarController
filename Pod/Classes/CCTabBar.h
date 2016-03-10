@@ -49,8 +49,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
+/**
+ *  Decided whether current index should be selected, return NO if do not
+ *  want to change selected current tab bar item
+ *
+ *  @param tabBar The tab bar on the top-most of controller
+ *  @param index  A tab bar index which be clicked
+ *
+ *  @return Change selected index to argument index or not
+ */
 - (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index;
+
+/**
+ *  Before the tab bar will select item at index, this method will be called
+ *
+ *  @param tabBar The tab bar on the top-most of controller
+ *  @param index  A tab bar index which be clicked
+ */
 - (void)tabBar:(CCTabBar *)tabBar willSelectItemAtIndex:(NSUInteger)index;
+
+/**
+ *  After the tab bar will select item at index, this method will be called
+ *
+ *  @param tabBar The tab bar on the top-most of controller
+ *  @param index  A tab bar index which be clicked
+ */
 - (void)tabBar:(CCTabBar *)tabBar didSelectItemAtIndex:(NSUInteger)index;
 
 @end
