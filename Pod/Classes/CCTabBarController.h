@@ -14,6 +14,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol CCTabBarControllerDelegate;
 
+/**
+
+ Initialize a tab bar controller like this and finally call `commitInitialization`
+ method.
+
+    CCTabBarController *tabBarController = [[CCTabBarController alloc] init];
+    [tabBarController addViewController:firstVC maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"Feed_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"Feed_Highlight"];
+    }];
+
+    [tabBarController addViewController:secondVC maker:^(CCTabBarItem * _Nonnull maker) {
+        maker.normalImage = [UIImage imageNamed:@"Find_Normal"];
+        maker.selectedImage = [UIImage imageNamed:@"Find_Highlight"];
+    }];
+
+    [tabBarController commitInitialization];
+ */
 @interface CCTabBarController : UIViewController
 
 /**
