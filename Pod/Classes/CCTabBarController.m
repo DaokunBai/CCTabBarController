@@ -187,6 +187,7 @@
         [self.delegate tabBarController:self didSelectViewController:self.viewControllers[index]];
     }
 }
+
 @end
 
 @implementation UIViewController (CCTabBarItem)
