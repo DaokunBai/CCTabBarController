@@ -149,11 +149,11 @@
 #pragma mark - CCTabBarDelegate
 
 - (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index {
-//    if ([[self delegate] respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
-//        if (![[self delegate] tabBarController:self shouldSelectViewController:[self viewControllers][index]]) {
-//            return NO;
-//        }
-//    }
+    if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
+        if (![self.delegate tabBarController:self shouldSelectViewController:self.viewControllers[index]]) {
+            return NO;
+        }
+    }
 
     if (self.selectedViewController == self.viewControllers[index]) {
         if ([self.selectedViewController isKindOfClass:[UINavigationController class]]) {
@@ -170,6 +170,12 @@
     return YES;
 }
 
+- (void)tabBar:(CCTabBar *)tabBar willSelectItemAtIndex:(NSUInteger)index {
+    if ([self.delegate respondsToSelector:@selector(tabBarController:willSelectViewController:)]) {
+        [self.delegate tabBarController:self willSelectViewController:self.viewControllers[index]];
+    }
+}
+
 - (void)tabBar:(CCTabBar *)tabBar didSelectItemAtIndex:(NSUInteger)index {
     if (index >= self.tabBar.items.count) {
         return;
@@ -177,9 +183,9 @@
 
     [self setSelectedIndex:index];
 
-//    if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)]) {
-//        [self.delegate tabBarController:self didSelectViewController:[self viewControllers][index]];
-//    }
+    if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)]) {
+        [self.delegate tabBarController:self didSelectViewController:self.viewControllers[index]];
+    }
 }
 @end
 

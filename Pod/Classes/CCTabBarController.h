@@ -72,6 +72,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol CCTabBarControllerDelegate <NSObject>
 
+@optional
+
+/**
+ *  This method is called when tab bar controller try to select a view controller
+ *  on tab bar controller.
+ *
+ *  @param tabBarController Current tab bar controller
+ *  @param viewController   An view controller of tab bar controller's view controllers
+ *
+ *  @return The tab bar controller whether can select the view controller or not
+ */
+- (BOOL)tabBarController:(CCTabBarController *)tabBarController shouldSelectViewController:(nonnull UIViewController *)viewController;
+
+/**
+ *  Before tab bar controller try to select view controller will call this method.
+ *
+ *  @param tabBarController Current tab bar controller
+ *  @param viewController   An view controller of tab bar controller's view controllers
+ */
+- (void)tabBarController:(CCTabBarController *)tabBarController willSelectViewController:(nonnull UIViewController *)viewController;
+
+/**
+ *  After tab bar controller try to select view controller will call this method
+ *
+ *  @param tabBarController Current tab bar controller
+ *  @param viewController   An view controller of tab bar controller's view controllers
+ */
+- (void)tabBarController:(CCTabBarController *)tabBarController didSelectViewController:(nonnull UIViewController *)viewController;
+
 @end
 
 
