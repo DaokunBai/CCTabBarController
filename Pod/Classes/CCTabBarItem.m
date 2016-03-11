@@ -7,7 +7,6 @@
 //
 
 #import "CCTabBarItem.h"
-#import "UIImage+Color.h"
 #import <Masonry/Masonry.h>
 
 @interface CCTabBarItem ()
