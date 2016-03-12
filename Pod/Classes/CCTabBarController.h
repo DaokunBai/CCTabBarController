@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+CCTabBarController.h"
 #import "CCTabBarItem.h"
 #import "CCTabBar.h"
 
