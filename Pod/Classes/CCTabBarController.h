@@ -46,6 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) CCTabBar *tabBar;
 
 /**
+ *  This boolean value indicated the tab bar is visible on the screen
+ *  or not, set this value will change tab bar state.
+ */
+@property (nonatomic, assign, getter=isTabBarHidden) BOOL tabBarHidden;
+
+/**
  *  Current selected view controller which display on this controller.
  */
 @property (nonatomic, weak) UIViewController *selectedViewController;
@@ -86,6 +92,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  this is not necessary to call.
  */
 - (void)beginInitialization;
+
+- (void)setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated;
 
 @end
 

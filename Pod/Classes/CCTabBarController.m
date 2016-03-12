@@ -146,6 +146,19 @@
     return self.selectedIndex;
 }
 
+- (void)setTabBarHidden:(BOOL)tabBarHidden {
+    _tabBarHidden = tabBarHidden;
+}
+
+- (void)setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated {
+    _tabBarHidden = tabBarHidden;
+    CGAffineTransform transform = tabBarHidden ? CGAffineTransformMakeTranslation(0, self.tabBar.itemHeight) : CGAffineTransformIdentity;
+    [UIView animateWithDuration:animated ? 0.3 : 0
+                     animations:^{
+                         _tabBar.transform = transform;
+                     }];
+}
+
 #pragma mark - CCTabBarDelegate
 
 - (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSUInteger)index {
