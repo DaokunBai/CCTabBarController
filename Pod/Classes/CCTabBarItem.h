@@ -28,6 +28,9 @@ typedef NS_ENUM(NSUInteger, CCTabBarItemType) {
  */
 - (instancetype)initWithMaker:(void(^)(CCTabBarItem *maker))maker;
 
+/**
+ *  Indicate this item is current highlighted item or not, default is NO
+ */
 @property (nonatomic, assign, getter=isCurrent) BOOL current;
 
 @property (nonatomic, strong, nullable) UIColor *normalBackgroundColor;
