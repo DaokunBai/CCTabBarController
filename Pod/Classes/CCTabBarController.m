@@ -150,7 +150,7 @@
     _tabBarHidden = tabBarHidden;
 }
 
-- (void)setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated {
+- (void)cc_setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated {
     _tabBarHidden = tabBarHidden;
     CGAffineTransform transform = tabBarHidden ? CGAffineTransformMakeTranslation(0, self.tabBar.itemHeight) : CGAffineTransformIdentity;
     [UIView animateWithDuration:animated ? 0.3 : 0

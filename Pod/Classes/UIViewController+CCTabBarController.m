@@ -29,7 +29,13 @@
 }
 
 - (CCTabBarController *)cc_tabBarController {
-    return objc_getAssociatedObject(self, @selector(cc_tabBarController));
+    CCTabBarController *tabBarController = objc_getAssociatedObject(self, @selector(cc_tabBarController));
+    if (!tabBarController) {
+        if ([self.navigationController.cc_tabBarController isKindOfClass:[CCTabBarController class]]) {
+            tabBarController = self.navigationController.cc_tabBarController;
+        }
+    }
+    return tabBarController;
 }
 
 - (void)cc_setTabBarController:(CCTabBarController *)cc_tabBarController {

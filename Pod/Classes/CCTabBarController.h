@@ -93,7 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)beginInitialization;
 
-- (void)setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated;
+- (void)cc_setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated;
 
 @end
 

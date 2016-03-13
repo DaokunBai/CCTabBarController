@@ -22,6 +22,7 @@
 
 - (instancetype)initWithMaker:(void (^)(CCTabBarItem *))maker {
     if (self = [super init]) {
+
         _backgroundImageView = [[UIImageView alloc] init];
 
         _backgroundColorView = [[UIView alloc] init];

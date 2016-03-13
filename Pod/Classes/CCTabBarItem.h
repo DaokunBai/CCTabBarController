@@ -33,6 +33,13 @@ typedef NS_ENUM(NSUInteger, CCTabBarItemType) {
  */
 @property (nonatomic, assign, getter=isCurrent) BOOL current;
 
+
+/**
+ *  The current tab bar item type, default is CCTabBarItemTypeDefault, 
+ *  each item is corresponding a view controller.
+ */
+@property (nonatomic, assign) CCTabBarItemType type;
+
 @property (nonatomic, strong, nullable) UIColor *normalBackgroundColor;
 @property (nonatomic, strong, nullable) UIColor *highlightedBackgroundColor;
 @property (nonatomic, strong, nullable) UIColor *selectedBackgroundColor;
