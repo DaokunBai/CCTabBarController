@@ -39,7 +39,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
-
     self.selectedIndex = 0;
     [self.view addSubview:_tabBar];
     [_tabBar updateTabBarLayout];
