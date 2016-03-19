@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "CCTabBarController"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CCTabBarController."
+  s.summary          = "CCTabBarController is a highly customizable tab bar controller."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
