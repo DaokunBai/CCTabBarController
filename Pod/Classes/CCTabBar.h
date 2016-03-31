@@ -39,6 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSArray<CCTabBarItem *> *items;
 
 /**
+ *  The top line for tab bar.
+ */
+@property (nonatomic, strong, readonly) UIView *topLine;
+
+/**
  *  Update constraints for tab bar.
  */
 - (void)updateTabBarLayout;

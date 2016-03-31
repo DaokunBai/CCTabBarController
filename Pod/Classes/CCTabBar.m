@@ -22,6 +22,13 @@
     if (self = [super init]) {
         _itemHeight = 49.0;
         self.backgroundColor = [UIColor whiteColor];
+        _topLine = [[UIView alloc] init];
+        _topLine.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:_topLine];
+        [_topLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.mas_offset(0);
+            make.height.mas_equalTo(0.5);
+        }];
     }
     return self;
 }
