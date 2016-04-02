@@ -9,6 +9,7 @@
 #import "CCAppDelegate.h"
 #import "CCViewController.h"
 #import <CCTabBarController/CCTabBarController.h>
+#import <CCTabBarController/CCScrollTabBarController.h>
 
 @implementation CCAppDelegate
 
@@ -16,6 +17,33 @@
 {
 
 
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+//    [self setupTabBarController];
+    [self setupScrollTabBarController];
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+- (void)setupScrollTabBarController {
+    CCViewController *firstVC = [[CCViewController alloc] init];
+    CCViewController *secondVC = [[CCViewController alloc] init];
+    CCViewController *thirdVC = [[CCViewController alloc] init];
+    CCViewController *forthVC = [[CCViewController alloc] init];
+
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:firstVC];
+
+    CCScrollTabBarController *tabBarController = [[CCScrollTabBarController alloc] init];
+    [tabBarController addViewController:firstVC title:@""];
+    [tabBarController addViewController:secondVC title:@""];
+    [tabBarController addViewController:thirdVC title:@""];
+    [tabBarController addViewController:forthVC title:@""];
+    
+    [tabBarController commitInitialization];
+    self.window.rootViewController = tabBarController;
+}
+
+- (void)setupTabBarController {
     CCViewController *firstVC = [[CCViewController alloc] init];
     CCViewController *secondVC = [[CCViewController alloc] init];
     CCViewController *thirdVC = [[CCViewController alloc] init];
@@ -28,7 +56,7 @@
         maker.normalImage = [UIImage imageNamed:@"Feed_Normal"];
         maker.selectedImage = [UIImage imageNamed:@"Feed_Highlight"];
     }];
-    
+
     [tabBarController addViewController:secondVC maker:^(CCTabBarItem * _Nonnull maker) {
         maker.normalImage = [UIImage imageNamed:@"Find_Normal"];
         maker.selectedImage = [UIImage imageNamed:@"Find_Highlight"];
@@ -43,13 +71,8 @@
         maker.normalImage = [UIImage imageNamed:@"People_Normal"];
         maker.selectedImage = [UIImage imageNamed:@"People_Highlight"];
     }];
-
     [tabBarController commitInitialization];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = tabBarController;
-    [self.window makeKeyAndVisible];
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
