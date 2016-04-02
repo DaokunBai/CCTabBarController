@@ -35,13 +35,21 @@
     NSMutableArray<UIViewController *> *_initializeViewControllers;
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _pageable = NO;
+        _tabBarHidden = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.selectedIndex = 0;
-    [self.view addSubview:_tabBar];
-    [_tabBar updateTabBarLayout];
+    [self.view addSubview:self.tabBar];
+    [self.tabBar updateTabBarLayout];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

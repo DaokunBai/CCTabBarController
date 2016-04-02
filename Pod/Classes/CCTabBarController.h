@@ -69,6 +69,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSArray<UIViewController *> *viewControllers;
 
 /**
+ *  If CCTarBarController is pageable, you can scroll page to another view controller.
+ *  Default is NO.
+ */
+@property (nonatomic, assign, getter=isPageable) BOOL pageable;
+
+/**
  *  Add an view controller to view controllers array, with a maker which
  *  customize CCTabBarItem. After add multiple view controllers, `MUST` call
  *  `commitInitialization` to commit your changes.
