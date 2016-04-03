@@ -34,11 +34,19 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:firstVC];
 
     CCScrollTabBarController *tabBarController = [[CCScrollTabBarController alloc] init];
-    [tabBarController addViewController:firstVC title:@""];
-    [tabBarController addViewController:secondVC title:@""];
-    [tabBarController addViewController:thirdVC title:@""];
-    [tabBarController addViewController:forthVC title:@""];
-    
+    [tabBarController addViewController:firstVC maker:^(CCScrollTabBarItem *maker) {
+        maker.title = @"111";
+    }];
+    [tabBarController addViewController:secondVC maker:^(CCScrollTabBarItem *maker) {
+        maker.title = @"222";
+    }];
+    [tabBarController addViewController:thirdVC maker:^(CCScrollTabBarItem *maker) {
+        maker.title = @"333";
+    }];
+    [tabBarController addViewController:forthVC maker:^(CCScrollTabBarItem *maker) {
+        maker.title = @"444";
+    }];
+
     [tabBarController commitInitialization];
     self.window.rootViewController = tabBarController;
 }

@@ -23,7 +23,7 @@
         _itemHeight = 49.0;
         self.backgroundColor = [UIColor whiteColor];
         _topLine = [[UIView alloc] init];
-        _topLine.backgroundColor = [UIColor lightGrayColor];
+        _topLine.backgroundColor = [UIColor colorWithRed:0.949 green:0.949 blue:0.949 alpha:0.5];
         [self addSubview:_topLine];
         [_topLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.mas_offset(0);
