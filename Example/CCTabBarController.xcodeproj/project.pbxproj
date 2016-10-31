@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08D626980AC9C4426FD64AEB /* Pods_CCTabBarController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADE5BCD3F2929F954959A2E /* Pods_CCTabBarController_Example.framework */; };
-		48E06273F5A4DB9164B5AFFE /* Pods_CCTabBarController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729CFCBBA16D4C1629BA2212 /* Pods_CCTabBarController_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,6 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		72FE6D241C90845B001B9597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE6D231C90845B001B9597 /* LaunchScreen.storyboard */; };
+		ABBA55F655D9411EB4C8687D /* Pods_CCTabBarController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */; };
+		BF60FE7DF12B378A3A6C7FF4 /* Pods_CCTabBarController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0ADE5BCD3F2929F954959A2E /* Pods_CCTabBarController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1B51471BD9055AF4C501C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		51CB0EFF696AB2C4C0AB5F95 /* Pods-CCTabBarController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CCTabBarController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCTabBarController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,13 +57,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		729CFCBBA16D4C1629BA2212 /* Pods_CCTabBarController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE6D231C90845B001B9597 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B208E94821D6A2C8556FDB8E /* Pods-CCTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CA23428303F254CFCCA44D6D /* Pods-CCTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AA70B4614F17B428318FFA50 /* Pods-CCTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1C9FF6DA89F6F8DFD82FF0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E6E107C56808DF2CDE47FA34 /* Pods-CCTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F30795A2C73D416E0F6AD361 /* CCTabBarController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CCTabBarController.podspec; path = ../CCTabBarController.podspec; sourceTree = "<group>"; };
+		F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5D28F25561FABD1382D3AB /* Pods-CCTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				08D626980AC9C4426FD64AEB /* Pods_CCTabBarController_Example.framework in Frameworks */,
+				ABBA55F655D9411EB4C8687D /* Pods_CCTabBarController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				48E06273F5A4DB9164B5AFFE /* Pods_CCTabBarController_Tests.framework in Frameworks */,
+				BF60FE7DF12B378A3A6C7FF4 /* Pods_CCTabBarController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				C475109FF13B73BD1A3F42E7 /* Pods */,
+				FB99B681B5998F0F05B13E08 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				0ADE5BCD3F2929F954959A2E /* Pods_CCTabBarController_Example.framework */,
-				729CFCBBA16D4C1629BA2212 /* Pods_CCTabBarController_Tests.framework */,
+				116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */,
+				F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,13 +182,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C475109FF13B73BD1A3F42E7 /* Pods */ = {
+		FB99B681B5998F0F05B13E08 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B208E94821D6A2C8556FDB8E /* Pods-CCTabBarController_Example.debug.xcconfig */,
-				CA23428303F254CFCCA44D6D /* Pods-CCTabBarController_Example.release.xcconfig */,
-				51CB0EFF696AB2C4C0AB5F95 /* Pods-CCTabBarController_Tests.debug.xcconfig */,
-				E6E107C56808DF2CDE47FA34 /* Pods-CCTabBarController_Tests.release.xcconfig */,
+				AA70B4614F17B428318FFA50 /* Pods-CCTabBarController_Example.debug.xcconfig */,
+				FD5D28F25561FABD1382D3AB /* Pods-CCTabBarController_Example.release.xcconfig */,
+				C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */,
+				C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -200,12 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "CCTabBarController_Example" */;
 			buildPhases = (
-				AF5AEDE8CC32C629E45DB920 /* Check Pods Manifest.lock */,
+				32952E72462E9F23A6C6EAD3 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				7CBBB53CC6920528ADE1DD58 /* Embed Pods Frameworks */,
-				C2D5D486AC526E2309758DE1 /* Copy Pods Resources */,
+				27EB31F89C10347C9CBA2637 /* [CP] Embed Pods Frameworks */,
+				6542EFCC0D2D1D2AAD010A25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "CCTabBarController_Tests" */;
 			buildPhases = (
-				4E186D7708D79D3BF3072920 /* Check Pods Manifest.lock */,
+				F6A41ADEFC5B462418423BBE /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				D2021B4AC598B512B0A549F0 /* Embed Pods Frameworks */,
-				CC9C4F059E6852BDE1A7097B /* Copy Pods Resources */,
+				9736C4F025B6A7A2B0DEF40B /* [CP] Embed Pods Frameworks */,
+				E65A13D9738F0DFFF32E60C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,29 +293,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E186D7708D79D3BF3072920 /* Check Pods Manifest.lock */ = {
+		27EB31F89C10347C9CBA2637 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7CBBB53CC6920528ADE1DD58 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,29 +308,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF5AEDE8CC32C629E45DB920 /* Check Pods Manifest.lock */ = {
+		32952E72462E9F23A6C6EAD3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C2D5D486AC526E2309758DE1 /* Copy Pods Resources */ = {
+		6542EFCC0D2D1D2AAD010A25 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,14 +338,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC9C4F059E6852BDE1A7097B /* Copy Pods Resources */ = {
+		9736C4F025B6A7A2B0DEF40B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65A13D9738F0DFFF32E60C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,19 +368,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2021B4AC598B512B0A549F0 /* Embed Pods Frameworks */ = {
+		F6A41ADEFC5B462418423BBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -509,7 +509,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B208E94821D6A2C8556FDB8E /* Pods-CCTabBarController_Example.debug.xcconfig */;
+			baseConfigurationReference = AA70B4614F17B428318FFA50 /* Pods-CCTabBarController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -525,7 +525,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA23428303F254CFCCA44D6D /* Pods-CCTabBarController_Example.release.xcconfig */;
+			baseConfigurationReference = FD5D28F25561FABD1382D3AB /* Pods-CCTabBarController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -541,7 +541,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51CB0EFF696AB2C4C0AB5F95 /* Pods-CCTabBarController_Tests.debug.xcconfig */;
+			baseConfigurationReference = C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -565,7 +565,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6E107C56808DF2CDE47FA34 /* Pods-CCTabBarController_Tests.release.xcconfig */;
+			baseConfigurationReference = C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
