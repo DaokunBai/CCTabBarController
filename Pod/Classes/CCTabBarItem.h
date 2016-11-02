@@ -52,6 +52,8 @@ typedef NS_ENUM(NSUInteger, CCTabBarItemType) {
 @property (nonatomic, strong, nullable) UIImage *highlightedImage;
 @property (nonatomic, strong, nullable) UIImage *selectedImage;
 
+- (void)setBadgeNumber:(NSInteger)number;
+
 @end
 
 

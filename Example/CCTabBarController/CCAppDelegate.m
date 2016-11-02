@@ -9,7 +9,7 @@
 #import "CCAppDelegate.h"
 #import "CCViewController.h"
 #import <CCTabBarController/CCTabBarController.h>
-#import <CCTabBarController/CCScrollTabBarController.h>
+//#import <CCTabBarController/CCScrollTabBarController.h>
 
 @implementation CCAppDelegate
 
@@ -19,37 +19,37 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-//    [self setupTabBarController];
-    [self setupScrollTabBarController];
+    [self setupTabBarController];
+//    [self setupScrollTabBarController];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)setupScrollTabBarController {
-    CCViewController *firstVC = [[CCViewController alloc] init];
-    CCViewController *secondVC = [[CCViewController alloc] init];
-    CCViewController *thirdVC = [[CCViewController alloc] init];
-    CCViewController *forthVC = [[CCViewController alloc] init];
-
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:firstVC];
-
-    CCScrollTabBarController *tabBarController = [[CCScrollTabBarController alloc] init];
-    [tabBarController addViewController:firstVC maker:^(CCScrollTabBarItem *maker) {
-        maker.title = @"111";
-    }];
-    [tabBarController addViewController:secondVC maker:^(CCScrollTabBarItem *maker) {
-        maker.title = @"222";
-    }];
-    [tabBarController addViewController:thirdVC maker:^(CCScrollTabBarItem *maker) {
-        maker.title = @"333";
-    }];
-    [tabBarController addViewController:forthVC maker:^(CCScrollTabBarItem *maker) {
-        maker.title = @"444";
-    }];
-
-    [tabBarController commitInitialization];
-    self.window.rootViewController = tabBarController;
-}
+//- (void)setupScrollTabBarController {
+//    CCViewController *firstVC = [[CCViewController alloc] init];
+//    CCViewController *secondVC = [[CCViewController alloc] init];
+//    CCViewController *thirdVC = [[CCViewController alloc] init];
+//    CCViewController *forthVC = [[CCViewController alloc] init];
+//
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:firstVC];
+//
+//    CCScrollTabBarController *tabBarController = [[CCScrollTabBarController alloc] init];
+//    [tabBarController addViewController:firstVC maker:^(CCScrollTabBarItem *maker) {
+//        maker.title = @"111";
+//    }];
+//    [tabBarController addViewController:secondVC maker:^(CCScrollTabBarItem *maker) {
+//        maker.title = @"222";
+//    }];
+//    [tabBarController addViewController:thirdVC maker:^(CCScrollTabBarItem *maker) {
+//        maker.title = @"333";
+//    }];
+//    [tabBarController addViewController:forthVC maker:^(CCScrollTabBarItem *maker) {
+//        maker.title = @"444";
+//    }];
+//
+//    [tabBarController commitInitialization];
+//    self.window.rootViewController = tabBarController;
+//}
 
 - (void)setupTabBarController {
     CCViewController *firstVC = [[CCViewController alloc] init];

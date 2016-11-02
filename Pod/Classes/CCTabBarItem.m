@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UILabel *promptLabel;
+@property (nonatomic, strong) UILabel *badgeNumberLabel;
 
 @end
 
@@ -33,10 +34,17 @@
 
         _promptLabel = [[UILabel alloc] init];
 
+        _badgeNumberLabel = [[UILabel alloc] init];
+        _badgeNumberLabel.textColor = [UIColor whiteColor];
+        _badgeNumberLabel.backgroundColor = [UIColor redColor];
+        _badgeNumberLabel.font = [UIFont systemFontOfSize:14];
+        _badgeNumberLabel.text = @"1";
+
         [self addSubview:_backgroundImageView];
         [_backgroundImageView addSubview:_backgroundColorView];
         [self addSubview:_iconImageView];
         [self addSubview:_promptLabel];
+        [self addSubview:_badgeNumberLabel];
 
         [_backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
@@ -48,6 +56,12 @@
 
         [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
+        }];
+
+        [_badgeNumberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(14);
+            make.centerX.mas_equalTo(_iconImageView.mas_right);
+            make.centerY.mas_equalTo(_iconImageView.mas_top);
         }];
 
         _normalBackgroundColor = [UIColor clearColor];
@@ -112,6 +126,10 @@
         resultImage = self.selectedImage;
     }
     return resultImage;
+}
+
+- (void)setBadgeNumber:(NSInteger)number {
+
 }
 
 @end
