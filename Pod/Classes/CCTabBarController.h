@@ -74,6 +74,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, getter=isPageable) BOOL pageable;
 
+@property (nonatomic, assign, getter=isHideBadgeOnClick) BOOL hideBadgeOnClick;
+
 /**
  *  Add an view controller to view controllers array, with a maker which
  *  customize CCTabBarItem. After add multiple view controllers, `MUST` call

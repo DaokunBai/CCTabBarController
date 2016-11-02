@@ -54,6 +54,8 @@
 }
 
 - (void)tabBarItemClicked:(CCTabBarItem *)item {
+    [item setBadgeNumber:0];
+
     NSUInteger index = [self.items indexOfObject:item];
     if (self.delegate) {
         if ([self.delegate respondsToSelector:@selector(tabBar:shouldSelectItemAtIndex:)]) {

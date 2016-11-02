@@ -37,8 +37,10 @@
         _badgeNumberLabel = [[UILabel alloc] init];
         _badgeNumberLabel.textColor = [UIColor whiteColor];
         _badgeNumberLabel.backgroundColor = [UIColor redColor];
-        _badgeNumberLabel.font = [UIFont systemFontOfSize:14];
-        _badgeNumberLabel.text = @"1";
+        _badgeNumberLabel.font = [UIFont systemFontOfSize:10];
+        _badgeNumberLabel.textAlignment = NSTextAlignmentCenter;
+        _badgeNumberLabel.layer.cornerRadius = 7;
+        _badgeNumberLabel.clipsToBounds = YES;
 
         [self addSubview:_backgroundImageView];
         [_backgroundImageView addSubview:_backgroundColorView];
@@ -60,8 +62,9 @@
 
         [_badgeNumberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(14);
-            make.centerX.mas_equalTo(_iconImageView.mas_right);
-            make.centerY.mas_equalTo(_iconImageView.mas_top);
+            make.width.mas_equalTo(23);
+            make.centerX.mas_equalTo(0).offset(17);
+            make.centerY.mas_equalTo(0).offset(-10);
         }];
 
         _normalBackgroundColor = [UIColor clearColor];
@@ -69,6 +72,7 @@
         maker(self);
 
         [self updateItemBehavior];
+        [self setBadgeNumber:0];
     }
     return self;
 }
@@ -129,7 +133,9 @@
 }
 
 - (void)setBadgeNumber:(NSInteger)number {
-
+    BOOL hidden = number == 0;
+    self.badgeNumberLabel.hidden = hidden;
+    self.badgeNumberLabel.text = number >= 100 ? @"99+" : [NSString stringWithFormat:@"%@", @(number)];
 }
 
 @end

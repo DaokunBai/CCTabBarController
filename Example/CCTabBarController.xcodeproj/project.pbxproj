@@ -20,9 +20,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		70D89FAD543947F270DB28E7 /* libPods-CCTabBarController_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F92DE99B99AE3782C070DBA7 /* libPods-CCTabBarController_Example.a */; };
 		72FE6D241C90845B001B9597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE6D231C90845B001B9597 /* LaunchScreen.storyboard */; };
-		ABBA55F655D9411EB4C8687D /* Pods_CCTabBarController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */; };
-		BF60FE7DF12B378A3A6C7FF4 /* Pods_CCTabBarController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1B51471BD9055AF4C501C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CCTabBarController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCTabBarController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,11 +57,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		72FE6D231C90845B001B9597 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA70B4614F17B428318FFA50 /* Pods-CCTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1C9FF6DA89F6F8DFD82FF0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F30795A2C73D416E0F6AD361 /* CCTabBarController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CCTabBarController.podspec; path = ../CCTabBarController.podspec; sourceTree = "<group>"; };
 		F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCTabBarController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92DE99B99AE3782C070DBA7 /* libPods-CCTabBarController_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCTabBarController_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5D28F25561FABD1382D3AB /* Pods-CCTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCTabBarController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +72,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				ABBA55F655D9411EB4C8687D /* Pods_CCTabBarController_Example.framework in Frameworks */,
+				70D89FAD543947F270DB28E7 /* libPods-CCTabBarController_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +83,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				BF60FE7DF12B378A3A6C7FF4 /* Pods_CCTabBarController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +117,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				116606751D541479A2E61821 /* Pods_CCTabBarController_Example.framework */,
 				F646073F7B646708DA09EB17 /* Pods_CCTabBarController_Tests.framework */,
+				F92DE99B99AE3782C070DBA7 /* libPods-CCTabBarController_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,8 +183,6 @@
 			children = (
 				AA70B4614F17B428318FFA50 /* Pods-CCTabBarController_Example.debug.xcconfig */,
 				FD5D28F25561FABD1382D3AB /* Pods-CCTabBarController_Example.release.xcconfig */,
-				C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */,
-				C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -220,12 +214,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "CCTabBarController_Tests" */;
 			buildPhases = (
-				F6A41ADEFC5B462418423BBE /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				9736C4F025B6A7A2B0DEF40B /* [CP] Embed Pods Frameworks */,
-				E65A13D9738F0DFFF32E60C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,51 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Example/Pods-CCTabBarController_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9736C4F025B6A7A2B0DEF40B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E65A13D9738F0DFFF32E60C3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCTabBarController_Tests/Pods-CCTabBarController_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41ADEFC5B462418423BBE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -543,7 +489,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C409BA4442C5F990CEEC98BA /* Pods-CCTabBarController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -567,7 +512,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C21C0AB4FC7A86BE1A745FAB /* Pods-CCTabBarController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
